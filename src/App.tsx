@@ -99,7 +99,7 @@ const CustomBox = styled(Box)`
   background-color: ${({ theme }) => theme.palette.background.default};
 `;
 
-const CustomBox_2 = styled(Box)`
+const CustomBox2 = styled(Box)`
   border: none ;
   padding: 8px 16px;
   background-color: tomato;
@@ -274,9 +274,9 @@ function App() {
                       </Typography>
                     </Grid>
                   </Grid>
-                <CustomBox_2>
+                <CustomBox2>
                   미신고 굴착공사 시 도시가스 사업법에 따라 2년 이하의 징역 또는 2천만원 이하의 벌금이 부과될 수 있습니다.
-                </CustomBox_2>
+                </CustomBox2>
                   </Typography>
                 </CustomBox>                            
               </Box>
