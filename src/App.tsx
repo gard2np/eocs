@@ -532,7 +532,11 @@ function App() {
                         <Typography variant="body1" color="text.secondary">
                         도시가스 배관의 매설방향 및 매설위치를 표시합니다
                         </Typography>
-                        <ResponsiveImage src={'/lm.png'} alt="linemark" />
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                          <ResponsiveImage src={'/lm01.png'} alt="linemark" style={{marginBottom: '8px'}} />
+                          <ResponsiveImage src={'/lm02.png'} alt="linemark" style={{marginBottom: '8px'}}/>
+                          <ResponsiveImage src={'/lm03.png'} alt="linemark" style={{ width: '40%' }} />
+                        </Grid>
                      </NumberedList>
                      <NumberedList>
                     <Typography variant="body1" color="text.secondary">
@@ -542,7 +546,24 @@ function App() {
                         <Typography variant="body1" color="text.secondary">
                         도시가스 배관의 긴급 시 또는 필요 시 가스를 차단하는 설비 입니다.
                         </Typography>
-                        <ResponsiveImage src={'/vvbox.png'} alt="valvebox" />
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '4px' }}>
+                          <ResponsiveImage src={'/vv01.png'} alt="valvebox" style={{marginBottom: '8px', width: '55%'}}/>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}><Typography variant="body1" color="text.secondary">바닥설치 일반형(구형)</Typography></div>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '4px' }}>
+                          <ResponsiveImage src={'/vv02.png'} alt="valvebox" style={{marginBottom: '8px'}}/>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}><Typography variant="body1" color="text.secondary">바닥설치 부양형(대형)</Typography></div>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '4px' }}>
+                          <ResponsiveImage src={'/vv03.png'} alt="valvebox" style={{marginBottom: '8px'}}/>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}><Typography variant="body1" color="text.secondary">바닥설치 부양형(소형)</Typography></div>
+                        </Grid>                      
                      </NumberedList>
                      <NumberedList>
                     <Typography variant="body1" color="text.secondary">
@@ -550,9 +571,26 @@ function App() {
                     </Typography>
                     <EmphasizedText>테스트박스(T/B)</EmphasizedText>
                         <Typography variant="body1" color="text.secondary">
-                        도시가스 배관의 매설방향 및 매설위치를 표시합니다.
+                        도시가스 배관 부식 방지를 위한 전기방식 시설의 전위를 측정하는 설비입니다.
                         </Typography>
-                        <ResponsiveImage src={'/tbbox.png'} alt="testbox" />
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '4px' }}>
+                          <ResponsiveImage src={'/tb01.png'} alt="valvebox" style={{marginBottom: '8px', width: '55%'}}/>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}><Typography variant="body1" color="text.secondary">바닥설치 일반형(구형)</Typography></div>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '4px' }}>
+                          <ResponsiveImage src={'/tb02.png'} alt="valvebox" style={{marginBottom: '8px', width: '55%'}}/>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}><Typography variant="body1" color="text.secondary">바닥설치 부양형(신형)</Typography></div>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '4px' }}>
+                          <ResponsiveImage src={'/tb03.png'} alt="valvebox" style={{marginBottom: '8px', width: '55%'}}/>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}><Typography variant="body1" color="text.secondary">입상형</Typography></div>
+                        </Grid>
                      </NumberedList>
                      <NumberedList>
                     <Typography variant="body1" color="text.secondary">
@@ -562,7 +600,18 @@ function App() {
                         <Typography variant="body1" color="text.secondary">
                         지하의 매몰된 도시가스 배관의 위치를 알리는 표시로써 배관 직상부에 설치합니다.
                         </Typography>
-                        <ResponsiveImage src={'/sheet.png'} alt="sheet" />
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '4px' }}>
+                          <ResponsiveImage src={'/sheet01.png'} alt="valvebox" style={{marginBottom: '8px'}}/>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}><Typography variant="body1" color="text.secondary">중압</Typography></div>
+                        </Grid>  
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '4px' }}>
+                          <ResponsiveImage src={'/sheet02.png'} alt="valvebox" style={{marginBottom: '8px'}}/>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}><Typography variant="body1" color="text.secondary">저압</Typography></div>
+                        </Grid>  
                      </NumberedList>
                      <NumberedList>
                     <Typography variant="body1" color="text.secondary">
@@ -572,7 +621,12 @@ function App() {
                         <Typography variant="body1" color="text.secondary">
                         외곽지역에 라인마크 대신 설치 된 표지판입니다.
                         </Typography>
-                        <ResponsiveImage src={'/etc.png'} alt="etc" />
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '4px' }}>
+                          <ResponsiveImage src={'etc.png'} alt="valvebox" style={{marginBottom: '8px', width: '70%'}}/>
+                        </Grid>
+                        <Grid alignItems="center" style={{marginTop: '16px', marginBottom: '8px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}><Typography variant="body1" color="text.secondary">매설위치 표지판</Typography></div>
+                        </Grid>
                      </NumberedList>
                   </Box>
                 </CustomAccordionDetails>
