@@ -220,21 +220,27 @@ function App() {
                 </Typography>
                 <CustomBox>
                   <Typography variant="h5" color="text.primary">
-                    <Grid container spacing={2} alignItems="center" style={{ marginBottom: '8px' }}>
-                      <Grid item xs={3.5} container justifyContent="flex-end">
-                        전화 :
+                    <Grid container spacing={1} alignItems="center" style={{ marginBottom: '-19px' }}>
+                      <Grid item xs={4} container justifyContent="flex-end">
                       </Grid>
-                      <Grid item xs={8.5} style={{ display: 'inline-flex', alignItems: 'center' }}>
-                        <Link href="tel:1644-0041" color="text.primary" underline="none">1644 - 0041</Link>
+                      <Grid item xs={8} style={{ display: 'inline-flex', alignItems: 'center'}}>
                         <Typography style={{ fontSize: '13px' }} gutterBottom color="primary.main">* 전국동일, 연중무휴</Typography>
                       </Grid>
                     </Grid>
+                    <Grid container spacing={1} alignItems="center" style={{ marginBottom: '8px' }}>
+                      <Grid item xs={4} container justifyContent="flex-end">
+                        전화 :
+                      </Grid>
+                      <Grid item xs={8} style={{ display: 'inline-flex', alignItems: 'center' }}>
+                        <Link href="tel:1644-0041" color="text.primary" underline="none">1644 - 0041</Link>
+                      </Grid>
+                    </Grid>
 
-                    <Grid container spacing={2} alignItems="center" style={{ marginBottom: '8px' }}>
-                      <Grid item xs={3.5} container justifyContent="flex-end">
+                    <Grid container spacing={1} alignItems="center" style={{ marginBottom: '8px' }}>
+                      <Grid item xs={4} container justifyContent="flex-end">
                         App :
                       </Grid>
-                      <Grid item xs={8.5} container spacing={1}>
+                      <Grid item xs={8} container spacing={1}>
                         <Grid item>
                           <Button
                             variant="contained"
@@ -255,23 +261,27 @@ function App() {
                         </Grid>
                       </Grid>
                     </Grid>
-                    <Grid container spacing={2} alignItems="center" style={{ marginBottom: '8px' }}>
-                      <Grid item xs={3.5} container justifyContent="flex-end">
+                    <Grid container spacing={1} alignItems="center" style={{ marginBottom: '8px' }}>
+                      <Grid item xs={4} container justifyContent="flex-end">
                         인터넷 :
                       </Grid>
-                      <Grid item xs={8.5}>
+                      <Grid item xs={8}>
                         <Link href="http://m.eocs.or.kr" color="text.primary" underline="none">www.eocs.or.kr</Link><br/>
                       </Grid>                    
                     </Grid>
-                    <Grid container spacing={2} alignItems="center" style={{ marginBottom: '8px' }}>
-                    <Grid item xs={3.5} container justifyContent="flex-end">
+                    <Grid container spacing={1} alignItems="center" style={{ marginBottom: '-21px', marginTop: '-19px'}}>
+                      <Grid item xs={4} container justifyContent="flex-end">
+                      </Grid>
+                      <Grid item xs={8} style={{ display: 'inline-flex', alignItems: 'center'}}>
+                        <Typography style={{ fontSize: '13px' }} gutterBottom color="primary.main">* JB 상황실</Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid container spacing={1} alignItems="center" style={{ marginBottom: '8px' }}>
+                    <Grid item xs={4} container justifyContent="flex-end">
                       상황실 :
                     </Grid>
-                    <Grid item xs={8.5} style={{ display: 'inline-flex', alignItems: 'center' }}>
+                    <Grid item xs={8} style={{ display: 'inline-flex', alignItems: 'center' }}>
                       <Link href="tel:041-530-1900" color="text.primary" underline="none">041-530-1900</Link>
-                      <Typography style={{ fontSize: '13px', marginLeft: '8px', color: '#1E88E5' }}>
-                        * JB 상황실
-                      </Typography>
                     </Grid>
                   </Grid>
                 <CustomBox2>
@@ -287,8 +297,119 @@ function App() {
                 <CustomAccordionDetails>
                   <Box p={2} bgcolor="background.default">
                     <Typography variant="body1" color="text.secondary">
-                      <ResponsiveImage src={imageSrc} alt="logic" />
+                      <ResponsiveImage src={imageSrc} alt="logic" style={{marginBottom:"18px"}}/>
                     </Typography>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom:"18px" }}>
+                    <Button variant="contained" color="primary" onClick={toggleFontSize}>
+                      글자 크기 변경
+                    </Button>
+                  </div>
+                    <Typography variant="body1" color="text.secondary">
+                      <span className="highlighted-text"> </span>
+                    </Typography>
+                    <EmphasizedText>굴착공사 신고대상</EmphasizedText>
+                        <Typography variant={getVariant()} color="text.secondary" style={{marginBottom:"18px"}}>
+                        24시간 내 도시가스 매설 지역에서 구멍뚫기, 말뚝박기,터파기 등의 굴착공사를 하는 자
+                        </Typography>
+                    <Typography variant="body1" color="text.secondary">
+                      <span className="highlighted-text"> </span>
+                    </Typography>
+                    <EmphasizedText>위반시 벌칙</EmphasizedText>
+                    <NumberedList>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        공사자가 공사 시행 전에 굴착공사정보 지원센터에 신고 미 준수 시
+                        </Typography>
+                    </NumberedListItem>
+                    <CustomBox2 style={{marginBottom:"18px"}}>
+                    <Typography variant={getVariant()} style={{fontWeight:"bold"}}>
+                    2년 이하의 징역 또는 2000만원 이하의 벌금
+                    </Typography>
+                    </CustomBox2>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        굴착공사 정보지원센터로부터 굴착공사 개시통보를 받기 전 굴착공사 시 
+                        </Typography>
+                    </NumberedListItem>
+                    </NumberedList>
+                    <CustomBox2 style={{marginBottom:"18px"}}>
+                    <Typography variant={getVariant()} style={{fontWeight:"bold"}}>
+                    1년 이하의 징역 또는 1000만원 이하의 벌금
+                    </Typography>
+                    </CustomBox2>
+                    <Typography variant="body1" color="text.secondary">
+                      <span className="highlighted-text"> </span>
+                    </Typography>
+                    <EmphasizedText>협의서 작성 필수 공사</EmphasizedText>
+                    <NumberedList>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        굴착공사 예정지역 범위 안에 매설 된 도시가스배관 길이가 100m 이상인 경우
+                        </Typography>
+                    </NumberedListItem>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        최고사용압력이 중압 이상인 배관이 10m 이상 노출될 것이 예상되는 굴착공사인 경우
+                        </Typography>
+                    </NumberedListItem>
+                    </NumberedList>
+                    <Typography variant="body1" color="text.secondary">
+                      <span className="highlighted-text"> </span>
+                    </Typography>
+                    <EmphasizedText>신고 내용</EmphasizedText>
+                    <NumberedList>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        굴착공사 발주자의 회사명
+                        </Typography>
+                    </NumberedListItem>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        굴착공사자의 회사명 및 공사 담당자의 인적사항
+                        </Typography>
+                    </NumberedListItem>
+                    </NumberedList>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        굴착공사의 종류ㆍ위치 및 공사 예정일자
+                        </Typography>
+                    </NumberedListItem>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        가스사용자가 소유하거나 점유하는 토지에서 굴착공사를 하는 경우에는 가스사용자의 인적사항 및 시설명
+                        </Typography>
+                    </NumberedListItem>
+                    <Typography variant="body1" color="text.secondary">
+                      <span className="highlighted-text"> </span>
+                    </Typography>
+                    <EmphasizedText>도시가스배관 매설상황 확인</EmphasizedText>
+                        <Typography variant={getVariant()} color="text.secondary" style={{marginBottom:"18px"}}>
+                        도시가스사업이 허가된 지역에서 굴착공사를 하고자 할 경우에는 한국가스안전공사 내에 설치된 굴착공사 정보지원센터에 굴착공사 계획을 신고, 도시가스배관 매설유무를 확인, 굴착 ㆍ배관위치를 표시하는 등의 절차를 이행한 후 굴착공사 정보지원센터로 부터 굴착공사개시 통보를 받고 굴착공사를 시작 해야 합니다
+                        </Typography>
+                    <Typography variant="body1" color="text.secondary">
+                      <span className="highlighted-text"> </span>
+                    </Typography>
+                    <EmphasizedText>굴착공사의 개시</EmphasizedText>
+                        <Typography variant={getVariant()} color="text.secondary" style={{marginBottom:"18px"}}>
+                        굴착공사정보지원센터로부터 굴착가능 여부를 통보 받은 후 도시가스사에 참관 요청하여 안전관리 전담자 참관하에 굴착공사 개시
+                        </Typography>
+                    <Typography variant="body1" color="text.secondary">
+                      <span className="highlighted-text"> </span>
+                    </Typography>
+                    <EmphasizedText>관계 법령</EmphasizedText>
+                    <NumberedList>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        도시가스사업법 제 30조의 3, 도시가스사업법 제 50 
+                        </Typography>
+                    </NumberedListItem>
+                    <NumberedListItem>
+                        <Typography variant={getVariant()} color="text.secondary" >
+                        도시가스사업법 시행규칙 제 52, 도시가스사업법 시행규칙 제 55
+                        </Typography>
+                    </NumberedListItem>
+                    </NumberedList>
+                        
                   </Box>
                 </CustomAccordionDetails>
               </CustomAccordion>
