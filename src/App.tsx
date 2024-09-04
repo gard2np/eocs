@@ -44,7 +44,7 @@ const theme = createTheme({
       main: '#D32F2F', // 빨간색
     },
     background: {
-      default: '#F5F5F5', // 밝은 회색
+      default: 'white', // 밝은 회색
     },
     text: {
       primary: '#333', // 어두운 회색
@@ -96,7 +96,7 @@ const CustomBox = styled(Box)`
   border: 1px solid ${({ theme }) => theme.palette.primary.main};
   border-radius: 4px;
   padding: 16px;
-  background-color: ${({ theme }) => theme.palette.background.default};
+  background-color: #F5F5F5;
 `;
 
 const CustomBox2 = styled(Box)`
@@ -155,9 +155,6 @@ const EmphasizedText = styled.span`
   }
 `;
 
-
-
-
 function App() {
   const [imageSrc, setImageSrc] = useState('/logic2.png');
   const [isSS1, setIsSS1] = useState("도시가스 배관보호 안내");
@@ -191,6 +188,7 @@ function App() {
   };
 
   const getVariant = () => (fontSizeChange === 0 ? 'body1' : 'h6');
+  const getFontSize = () => (fontSizeChange === 0 ? '1.25rem' : '1.5rem')
 
   return (
     <MuiThemeProvider theme={theme}>
@@ -208,17 +206,18 @@ function App() {
               color="white"
               mb={1}
               py={1}  /* 위와 아래 여백 추가 */
+              boxShadow={5}
             >
               <Typography variant="h4" component="h1" align="center">
                 {isSS1} <br /> {isSS2}
               </Typography>
             </Box>
-            <Box component="main" mt={4}>
-              <Box mb={4}>
+            <Box component="main" mt={4} >
+              <Box mb={4} >
                 <Typography variant="h4" fontWeight="bold" align='center' gutterBottom color="primary.main">
                   굴착공사 신고 방법
                 </Typography>
-                <CustomBox>
+                <CustomBox boxShadow={5}>
                   <Typography variant="h5" color="text.primary">
                     <Grid container spacing={1} alignItems="center" style={{ marginBottom: '-19px' }}>
                       <Grid item xs={4} container justifyContent="flex-end">
@@ -295,12 +294,12 @@ function App() {
                   <Typography variant="h6" color="primary.main">굴착공사 신청 및 이용절차</Typography>
                 </CustomAccordionSummary>
                 <CustomAccordionDetails>
-                  <Box p={2} bgcolor="background.default">
+                  <Box p={2} bgcolor="background.default" border="1px solid #757575" boxShadow={5}>
                     <Typography variant="body1" color="text.secondary">
                       <ResponsiveImage src={imageSrc} alt="logic" style={{marginBottom:"18px"}}/>
                     </Typography>
                 <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom:"18px" }}>
-                    <Button variant="contained" color="primary" onClick={toggleFontSize}>
+                    <Button variant="contained" color="primary" onClick={toggleFontSize }>
                       글자 크기 변경
                     </Button>
                   </div>
@@ -309,7 +308,7 @@ function App() {
                     </Typography>
                     <EmphasizedText>굴착공사 신고대상</EmphasizedText>
                         <Typography variant={getVariant()} color="text.secondary" style={{marginBottom:"18px"}}>
-                        24시간 내 도시가스 매설 지역에서 구멍뚫기, 말뚝박기,터파기 등의 굴착공사를 하는 자
+                        <span style={{ fontSize: getFontSize(), fontWeight: 'bold', color: 'red' }}>24시간</span> 내 도시가스 매설 지역에서 구멍뚫기, 말뚝박기,터파기 등의 굴착공사를 하는 자
                         </Typography>
                     <Typography variant="body1" color="text.secondary">
                       <span className="highlighted-text"> </span>
@@ -344,12 +343,12 @@ function App() {
                     <NumberedList>
                     <NumberedListItem>
                         <Typography variant={getVariant()} color="text.secondary" >
-                        굴착공사 예정지역 범위 안에 매설 된 도시가스배관 길이가 100m 이상인 경우
+                        굴착공사 예정지역 범위 안에 매설 된 <span style={{ fontSize: getFontSize(), fontWeight: 'bold', color: 'red' }}>도시가스배관 길이</span>가 <span style={{ fontSize: getFontSize(), fontWeight: 'bold', color: 'red' }}>100m</span> 이상인 경우
                         </Typography>
                     </NumberedListItem>
                     <NumberedListItem>
                         <Typography variant={getVariant()} color="text.secondary" >
-                        최고사용압력이 중압 이상인 배관이 10m 이상 노출될 것이 예상되는 굴착공사인 경우
+                        최고사용압력이 <span style={{ fontSize: getFontSize(), fontWeight: 'bold', color: 'red' }}>중압</span> 이상인 배관이 <span style={{ fontSize: getFontSize(), fontWeight: 'bold', color: 'red' }}>10m</span> 이상 노출될 것이 예상되는 굴착공사인 경우
                         </Typography>
                     </NumberedListItem>
                     </NumberedList>
@@ -419,11 +418,11 @@ function App() {
                 </CustomAccordionSummary>
                 <CustomAccordionDetails>
                   <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <Button variant="contained" color="primary" onClick={toggleFontSize}>
+                    <Button variant="contained" color="primary" onClick={toggleFontSize} style={{marginBottom:'8px'}}>
                       글자 크기 변경
                     </Button>
                   </div>
-                  <Box p={2} bgcolor="background.default">
+                  <Box p={2} bgcolor="background.default" border="1px solid #757575" boxShadow={5}>
                     <NumberedList>
                     <Typography variant="body1" color="text.secondary">
                       <span className="highlighted-text"> </span>
@@ -464,7 +463,7 @@ function App() {
                     <EmphasizedText>그라우팅ㆍ보링작업</EmphasizedText>
                       <NumberedListItem>
                         <Typography variant={getVariant()} color="text.secondary">
-                        제1호 가목부터 다목까지를 준용할 것. 이 경우 파일박기는 그라우팅ㆍ보링 작업으로 본다.
+                        파일박기 및 빼기작업 1~3을 준용할 것. 이 경우 파일박기는 그라우팅ㆍ보링 작업으로 본다.
                         </Typography>
                       </NumberedListItem>
                       <NumberedListItem>
@@ -477,7 +476,7 @@ function App() {
                       <EmphasizedText>터파기ㆍ되메우기 및 포장작업</EmphasizedText>
                       <NumberedListItem>
                         <Typography variant={getVariant()} color="text.secondary">
-                        제1호 가목부터 다목까지를 준용할 것. 이 경우 파일박기는 터파기로 본다.
+                        파일박기 및 빼기작업 1~3을 준용할 것. 이 경우 파일박기는 터파기로 본다.
                         </Typography>
                       </NumberedListItem>
                       <NumberedListItem>
@@ -524,7 +523,7 @@ function App() {
                   <Typography variant="h6" color="primary.main">도시가스 배관 식별법</Typography>
                 </CustomAccordionSummary>
                 <CustomAccordionDetails>
-                  <Box p={2} bgcolor="background.default">
+                  <Box p={2} bgcolor="background.default" border="1px solid #757575" boxShadow={5}>
                   <NumberedList>
                     <Typography variant="body1" color="text.secondary">
                       <span className="highlighted-text"> </span>
