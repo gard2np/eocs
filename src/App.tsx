@@ -637,7 +637,7 @@ function App() {
                 </CustomAccordionSummary>
                 <CustomAccordionDetails>
                   <Box p={1} bgcolor="background.default" display="flex" justifyContent="center">
-                    <Button variant="contained" color="primary" onClick={() => window.open('https://www.jbcorporation.com/index/service_09.php', '_blank')}>
+                    <Button variant="contained" color="primary" onClick={() => window.open('https://www.jbcorporation.com/index/business_01_02_03.php', '_blank')}>
                     JB 홈페이지 바로가기
                     </Button>
                   </Box>
