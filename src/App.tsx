@@ -231,7 +231,7 @@ function App() {
                         전화 :
                       </Grid>
                       <Grid item xs={8} style={{ display: 'inline-flex', alignItems: 'center' }}>
-                        <Link href="tel:1644-0041" color="text.primary" underline="none">1644 - 0041</Link>
+                        <Link href="tel:1644-0001" color="text.primary" underline="none">1644 - 0001</Link>
                       </Grid>
                     </Grid>
 
@@ -280,7 +280,7 @@ function App() {
                       상황실 :
                     </Grid>
                     <Grid item xs={8} style={{ display: 'inline-flex', alignItems: 'center' }}>
-                      <Link href="tel:041-530-1900" color="text.primary" underline="none">041-530-1900</Link>
+                      <Link href="tel:041-533-1907" color="text.primary" underline="none">041-533-1907</Link>
                     </Grid>
                   </Grid>
                 <CustomBox2>
@@ -647,6 +647,7 @@ function App() {
           </Container>
         </StyledThemeProvider>
     </PageContainer>
+
       <FooterContainer>
         <p>Copyright (c) 2024 JB.co.,LTD.  All right Reserved.</p>
       </FooterContainer>
